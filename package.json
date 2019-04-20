@@ -16,5 +16,13 @@
     "hexo-renderer-marked": "^0.3.2",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3"
+  },
+  "scripts": {
+    "init": "git clone https://github.com/theme-next/hexo-theme-next.git themes/next && npm install",
+    "update": "git pull origin source",
+    "start": "hexo s",
+    "deploy": "hexo generate -d",
+    "push_source": "git add . && git commit -m 'update' && git push origin source",
+    "deploy_push_source": "git add . && git commit -m 'update' && git push origin source && hexo generate -d"
   }
 }
